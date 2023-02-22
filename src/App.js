@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import Body from "./Body";
+import Footer from "./Footer";
+import Header from "./Header";
+import Sdata from "./Sdata";
 
 function App() {
+
+  console.log("data file",Sdata[2].title);
+  const mapmethod=(val)=>{
+    return(
+      <>
+      <Header name={val.name} title={val.title} id={val.id}/>
+      </>
+    )
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+         {
+      Sdata.map(mapmethod)
+    }
+    {/* <Header/> */}
+      <Body/>
+      <Footer/>
+ 
+    
+
+    </>
   );
 }
 
