@@ -3,17 +3,14 @@ import Sdata from './Sdata';
 
 
 const Header=(props)=>{
-
-    const data=(val)=>{
+    const show=(val)=>{
         return(
             <>
-            <h1>{val.name}</h1>
-            <h1>{val.title}</h1>
-            <h1>{val.id}</h1>
+                <h1>{val.name}</h1>
             </>
         )
     }
-    console.log("data of props",props)
+  
     return(
         <>
         {/* <h1> i am header</h1> */}
@@ -21,9 +18,9 @@ const Header=(props)=>{
         <h2>{props.title}</h2>
         <h2>{props.id}</h2> */}
         
-        {
-            Sdata.map(data)
-        }
+       {Sdata.map(show)}
+       {/* {Sdata} */}
+       
         </>
     )
 }

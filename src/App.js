@@ -5,7 +5,7 @@ import Sdata from "./Sdata";
 
 function App() {
 
-  console.log("data file",Sdata[2].title);
+  console.log("data file",Sdata);
   const mapmethod=(val)=>{
     return(
       <>
